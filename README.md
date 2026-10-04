@@ -1,17 +1,19 @@
 # HimikVPN
 
-Android 7.0+. Версия **0.3.0-beta**.
+Android 7.0+. Версия **0.3.1-beta**.
 
-- [Скачать ARM64 APK — 57,5 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.3.0-beta/HimikVPN-0.3.0-beta-arm64.apk)
-- [Универсальный APK — 247,4 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.3.0-beta/HimikVPN-0.3.0-beta.apk)
-- [Релиз, контрольные суммы и лицензии](https://github.com/pop0truas/HimikVPN/releases/tag/v0.3.0-beta)
+- [Скачать ARM64 APK — 57,5 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.3.1-beta/HimikVPN-0.3.1-beta-arm64.apk)
+- [Универсальный APK — 247,7 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.3.1-beta/HimikVPN-0.3.1-beta.apk)
+- [Релиз, контрольные суммы и лицензии](https://github.com/pop0truas/HimikVPN/releases/tag/v0.3.1-beta)
 
 Установите APK обычным способом Android. При первом подключении подтвердите запрос VPN. Пакет ru.himikvpn.preview сохранён для обновления предыдущей версии.
 
-Кнопки, переключение вкладок и блоки аккаунта переделаны по apple-design. Реальный Android VPN service с XTLS/libXray поддерживает VLESS TLS/REALITY и Hysteria2, TLS/SNI/IPv6/ALPN, Salamander и переключение портов. Есть HTTPS-доступ к backend и Android Keystore. Покупки открываются на сайте/в боте.
+Кнопки, вкладки и блоки аккаунта оформлены по apple-design. Ядро XTLS/libXray v26.9.30 поддерживает VLESS TLS/REALITY/XHTTP и Hysteria2. Импорт сохраняет XHTTP extra и Hysteria2 fm; флаг страны больше не повторяется в названии. Соединение проверяется через независимые HTTPS-адреса в VPN Network, поздние ответы не затирают новый статус. Есть HTTPS backend, Android Keystore и переход на сайт/бота для покупки.
 
-Сборки TypeScript/web/Android прошли; один реальный Hysteria2-тест на эмуляторе подтвердил TLS/Salamander, protected sockets, HTTPS200 через VPN и отключение. До этой версии были проверены VLESS/REALITY, недоступный сервер, Keystore и backend WebView. SHA-256 опубликованных APK совпадают.
+Трафик: получено/отправлено для текущего туннеля берутся из счётчиков TUN ядра, а расход аккаунта и суммы по серверам за 30 дней — из истории панели. Панель не хранит исторические направления; они не вычисляются из общей суммы.
 
-**Debug-beta.** Физический телефон, полный вход/подписка клиента и переключение сетей ещё требуют проверки. Переключение портов отдельно не проверялось. pinSHA256, небезопасный TLS, Gecko и realm-ссылки отклоняются. Явные Xray pcs/vcn поддерживаются, но pcs имеет другие правила проверки сертификата. Нативный OAuth и постоянный системный kill switch недоступны. Glass реализован в web UI.
+Проверены импорт всех четырёх действующих профилей, сборки и API истории. Оба реальных Hysteria2-профиля на эмуляторе подтвердили интернет и рост счётчиков, включая резервную проверку при отказе первого адреса. **Соединения REALITY и XHTTP на текущей сети не подтверждены:** REALITY не ответил по TCP с ПК; XHTTP не получил HTTPS-ответ и через отдельный официальный Xray. Причина не установлена; полный сценарий подключения всех профилей не прошёл.
 
-Репозиторий распространяет APK и документацию. Лицензии и исходники ядра — в THIRD_PARTY_NOTICES.zip из релиза.
+**Debug-beta.** Физический ARM64-телефон и переключение сетей ещё требуют проверки. Нативный OAuth и постоянный системный kill switch недоступны. pinSHA256, небезопасный TLS, Gecko и realm-ссылки отклоняются. Явные Xray pcs/vcn поддерживаются; pcs имеет другие правила проверки сертификата.
+
+Репозиторий распространяет APK и документацию. Лицензии и сведения об исходниках ядра — в THIRD_PARTY_NOTICES.zip из релиза.
