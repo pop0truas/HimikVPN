@@ -1,22 +1,17 @@
 # HimikVPN
 
-Android VPN-приложение. Версия **0.2.0-beta**, Android 7.0+.
+Android 7.0+. Версия **0.3.0-beta**.
 
-## Скачать и установить
+- [Скачать ARM64 APK — 57,5 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.3.0-beta/HimikVPN-0.3.0-beta-arm64.apk)
+- [Универсальный APK — 247,4 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.3.0-beta/HimikVPN-0.3.0-beta.apk)
+- [Релиз, контрольные суммы и лицензии](https://github.com/pop0truas/HimikVPN/releases/tag/v0.3.0-beta)
 
-- [ARM64 — 57,5 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.2.0-beta/HimikVPN-0.2.0-beta-arm64.apk): для современных Android-телефонов.
-- [Универсальный APK — 247,7 МБ](https://github.com/pop0truas/HimikVPN/releases/download/v0.2.0-beta/HimikVPN-0.2.0-beta.apk): ARM64, ARMv7, x86, x86_64.
-- [Контрольные суммы SHA-256](https://github.com/pop0truas/HimikVPN/releases/download/v0.2.0-beta/SHA256SUMS.txt).
-- [Описание релиза и лицензии](https://github.com/pop0truas/HimikVPN/releases/tag/v0.2.0-beta).
+Установите APK обычным способом Android. При первом подключении подтвердите запрос VPN. Пакет ru.himikvpn.preview сохранён для обновления предыдущей версии.
 
-Установите APK обычным способом Android. При первом подключении подтвердите системный запрос VPN. Пакет `ru.himikvpn.preview` сохранён для обновления предыдущей preview-версии.
+Кнопки, переключение вкладок и блоки аккаунта переделаны по apple-design. Реальный Android VPN service с XTLS/libXray поддерживает VLESS TLS/REALITY и Hysteria2, TLS/SNI/IPv6/ALPN, Salamander и переключение портов. Есть HTTPS-доступ к backend и Android Keystore. Покупки открываются на сайте/в боте.
 
-## Возможности и ограничения
+Сборки TypeScript/web/Android прошли; один реальный Hysteria2-тест на эмуляторе подтвердил TLS/Salamander, protected sockets, HTTPS200 через VPN и отключение. До этой версии были проверены VLESS/REALITY, недоступный сервер, Keystore и backend WebView. SHA-256 опубликованных APK совпадают.
 
-Реальный Android VPN service с XTLS/libXray, VLESS TLS/REALITY, HTTPS-проверка через VPN, доступ к backend, Android Keystore, ползунок подключения и стеклянные панели. Покупки открываются на существующем сайте/в боте.
+**Debug-beta.** Физический телефон, полный вход/подписка клиента и переключение сетей ещё требуют проверки. Переключение портов отдельно не проверялось. pinSHA256, небезопасный TLS, Gecko и realm-ссылки отклоняются. Явные Xray pcs/vcn поддерживаются, но pcs имеет другие правила проверки сертификата. Нативный OAuth и постоянный системный kill switch недоступны. Glass реализован в web UI.
 
-Универсальный APK прошёл на эмуляторе тест реального локального VLESS/REALITY-туннеля и HTTPS через VPN, недоступного сервера, отключения, шифрованного хранилища и HTTPS-запроса к backend из WebView. Опубликованные APK проверены по SHA-256.
-
-**Экспериментальная beta с debug-подписью.** Физический телефон и полный вход/подписка реального клиента ещё требуют проверки. Hysteria2 и нативный Google/Apple/Telegram OAuth не включены. Постоянного системного kill switch нет: завершение процесса может восстановить прямой доступ к сети. Смена сетей и ограничения батареи остаются непроверенными. Glass-материал реализован в web UI, не нативным Apple Liquid Glass.
-
-Репозиторий предназначен для распространения APK и документации. Лицензии и ссылки на исходники встроенного ядра приложены к релизу в `THIRD_PARTY_NOTICES.zip`.
+Репозиторий распространяет APK и документацию. Лицензии и исходники ядра — в THIRD_PARTY_NOTICES.zip из релиза.
