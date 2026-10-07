@@ -1,13 +1,13 @@
 # HimikVPN
 
-Android 7.0+. Версия **0.5.3+17**. Windows — интерфейсный Preview.
+Android 7.0+. Версия **0.5.4+18**. Windows — интерфейсный Preview.
 
-- [Скачать APK](https://github.com/pop0truas/HimikVPN/releases/download/v0.5.3-flutter-preview/HimikVPN-0.5.3-flutter-preview-universal.apk)
-- [Windows Preview](https://github.com/pop0truas/HimikVPN/releases/download/v0.5.3-flutter-preview/HimikVPN-0.5.3-flutter-preview-windows-x64.zip)
-- [Релиз и контрольные суммы](https://github.com/pop0truas/HimikVPN/releases/tag/v0.5.3-flutter-preview)
+- [Скачать APK](https://github.com/pop0truas/HimikVPN/releases/download/v0.5.4/HimikVPN-0.5.4-universal.apk)
+- [Windows Preview](https://github.com/pop0truas/HimikVPN/releases/download/v0.5.4/HimikVPN-0.5.4-windows-x64.zip)
+- [Релиз и контрольные суммы](https://github.com/pop0truas/HimikVPN/releases/tag/v0.5.4)
 
 Установите APK поверх предыдущей Flutter-версии. Пакет `ru.himikvpn.migration`
-и сертификат сохранены. Вход — по ссылке подписки. При первом подключении
+и сертификат сохранены. Вход — по ссылке подписки или через QR. Старые ссылки `himikvpn://add/` открывают импорт с подтверждением. При первом подключении
 подтвердите системный запрос VPN. Покупка и продление доступны на
 [сайте](https://himikvpn.ru) и в [Telegram-боте](https://t.me/HimikVPN_bot).
 
